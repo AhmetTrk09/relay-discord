@@ -1,0 +1,16 @@
+{
+  "compiler": {
+    "version": "6.7.3",
+    "file": "innosetup-6.7.3.exe",
+    "url": "https://github.com/jrsoftware/issrc/releases/download/is-6_7_3/innosetup-6.7.3.exe",
+    "sha256": "9c73c3bae7ed48d44112a0f48e66742c00090bdb5bef71d9d3c056c66e97b732",
+    "signer": "Pyrsys B.V."
+  },
+  "framework": {
+    "version": "4.8",
+    "file": "ndp48-web.exe",
+    "url": "https://download.visualstudio.microsoft.com/download/pr/2d6bb6b2-226a-4baa-bdec-798822606ff1/9b7b8746971ed51a1770ae4293618187/ndp48-web.exe",
+    "sha256": "0bba3094588c4bfec301939985222a20b340bf03431563dec8b2b4478b06fffa",
+    "signer": "Microsoft Corporation"
+  }
+}

@@ -1,0 +1,21 @@
+Relay
+
+Windows 10/11, Intel/AMD 64 bit ve .NET Framework 4.8 gerekir.
+Setup dosyası .NET Framework eksikse Microsoft web kurucusunu çalıştırır. Bu adım internet ister.
+ZIP kullanıyorsan paketi tamamen çıkarıp Relay.exe dosyasını aç.
+Ağ araçları her iki pakette de hazırdır; ayrıca indirmen gerekmez.
+
+Relay açılırken yönetici izni ister ve standart profille araçları otomatik başlatır.
+Profili ana ekrandan değiştirebilirsin. Ağ ve başlangıç seçenekleri Ayarlar bölümünde.
+Canlı günlük bölümündeki Erişim testi HTTPS erişimini kontrol eder; sesli sohbeti Discord içinde denemelisin.
+
+Durdur düğmesi Relay'in açtığı araçları kapatır ve kendi hosts kayıtlarını temizler.
+Tam çıkış için sistem tepsisindeki simgeden Durdur ve çık seçeneğini kullan.
+Zorla kapanma sonrası sorun varsa Relay'i yeniden açıp Durdur'a bas.
+
+Relay VPN değildir. DNS ve UDP kuralları başka bağlantıları da etkileyebilir.
+Her ağda çalışmayabilir; ping de değişebilir.
+Relay ve Setup EXE dosyaları imzasızdır; uyarıları otomatik olarak yanlış alarm sayma.
+
+LICENSE, THIRD_PARTY_NOTICES.md ve licenses/ klasörünü paketle birlikte tut.
+Üçüncü taraf kaynak bağlantıları THIRD_PARTY_NOTICES.md dosyasındadır.

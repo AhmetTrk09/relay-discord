@@ -1,0 +1,9 @@
+﻿Relay, Discord bağlantısı için GoodbyeDPI, zapret ve yerel bir TLS proxy kullanır.
+
+Ağ araçları bu kurulum paketinin içindedir. Bunları ayrıca indirmen gerekmez.
+
+Microsoft .NET Framework 4.8 veya daha yeni bir 4.x sürümü gerekiyorsa kurulum bunu kontrol eder. Eksikse paketteki Microsoft web kurucusu çalıştırılır. Bu adım internet bağlantısı gerektirir; yeniden başlatma istenirse Relay kurulumunu Windows açıldıktan sonra tekrar çalıştırabilirsin. .NET Framework, Microsoft'un kendi lisans koşullarına tabidir.
+
+Kurulum ağ araçlarını başlatmaz. Relay'i daha sonra açtığında uygulama yönetici izni ister ve standart profille çalışır. Otomatik başlangıç seçeneğini uygulamanın Ayarlar sekmesinden açabilirsin.
+
+Güncelleme veya kaldırma işleminden önce sistem tepsisindeki Relay simgesinden Durdur ve çık seçeneğini kullan.

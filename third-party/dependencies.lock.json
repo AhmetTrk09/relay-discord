@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "component": "GoodbyeDPI",
+      "version": "0.2.3rc3",
+      "file": "GoodbyeDPI-0.2.3rc3-source.tar.gz",
+      "url": "https://codeload.github.com/ValdikSS/GoodbyeDPI/tar.gz/refs/tags/0.2.3rc3",
+      "sha256": "90ef7ce4b11bd9e6d4c7c15ae851ea0df23aadfd032ff82f0a960252f08e5a68"
+    },
+    {
+      "component": "zapret",
+      "version": "v72.9",
+      "file": "zapret-v72.9-source.tar.gz",
+      "url": "https://codeload.github.com/bol-van/zapret/tar.gz/refs/tags/v72.9",
+      "sha256": "f6f48fde0a93024701e350bee43ae12f14c26b6afacc7eef54c18faa275b3064"
+    },
+    {
+      "component": "WinDivert",
+      "version": "v2.2.0",
+      "file": "WinDivert-v2.2.0-source.tar.gz",
+      "url": "https://codeload.github.com/basil00/WinDivert/tar.gz/refs/tags/v2.2.0",
+      "sha256": "30d69b17194021c86de221722d8af5ed356bdedf2bb197cd392b0a0ca61b116d"
+    },
+    {
+      "component": "WinDivert",
+      "version": "v2.2.2",
+      "file": "WinDivert-v2.2.2-source.tar.gz",
+      "url": "https://codeload.github.com/basil00/WinDivert/tar.gz/refs/tags/v2.2.2",
+      "sha256": "300c1b14e08652e0f8647bf06e9b212f924af76cb2459bd0f88da481c9b08336"
+    },
+    {
+      "component": "Cygwin",
+      "version": "3.4.10-1",
+      "file": "cygwin-3.4.10-1-src.tar.xz",
+      "url": "https://ftp.cvut.cz/mirrors/cygwin.com/x86_64/release/cygwin/cygwin-3.4.10-1-src.tar.xz",
+      "sha256": "ac70af0d4e644732f74946f55f7bafe010bab9b9da39a9327c3f0367f1fa43a2"
+    }
+  ],
+  "files": [
+    {
+      "path": "bin/goodbyedpi/goodbyedpi.exe",
+      "sha256": "8d412b094bb9c137ff25ba9a794d1122ecc84bb776debff6c249723a13cc31cd",
+      "upstreamMatches": [
+        {
+          "archive": "goodbyedpi-0.2.3rc3-2.zip",
+          "path": "goodbyedpi-0.2.3rc3-2/x86_64/goodbyedpi.exe"
+        }
+      ]
+    },
+    {
+      "path": "bin/goodbyedpi/WinDivert.dll",
+      "sha256": "6110bfa44667405179c3e15e12af1b62037e447ed59b054b19042032995e6c7e",
+      "upstreamMatches": [
+        {
+          "archive": "goodbyedpi-0.2.3rc3-2.zip",
+          "path": "goodbyedpi-0.2.3rc3-2/x86_64/WinDivert.dll"
+        },
+        {
+          "archive": "WinDivert-2.2.0-A.zip",
+          "path": "WinDivert-2.2.0-A/x64/WinDivert.dll"
+        },
+        {
+          "archive": "WinDivert-2.2.0-B.zip",
+          "path": "WinDivert-2.2.0-B/x64/WinDivert.dll"
+        },
+        {
+          "archive": "WinDivert-2.2.0-C.zip",
+          "path": "WinDivert-2.2.0-C/x64/WinDivert.dll"
+        }
+      ]
+    },
+    {
+      "path": "bin/goodbyedpi/WinDivert64.sys",
+      "sha256": "e69b5ba3f0cd6cfb2983e442636e7f0b342b61b15264b0328317d4559c82cf50",
+      "upstreamMatches": [
+        {
+          "archive": "goodbyedpi-0.2.3rc3-2.zip",
+          "path": "goodbyedpi-0.2.3rc3-2/x86/WinDivert64.sys"
+        },
+        {
+          "archive": "goodbyedpi-0.2.3rc3-2.zip",
+          "path": "goodbyedpi-0.2.3rc3-2/x86_64/WinDivert64.sys"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/ACTIVE_DISCORD_UDP.bin",
+      "sha256": "2fe18b3bd20807d36704d0b072092ee49ae84edca907a4420ab9a0f0f28fddcf",
+      "upstreamMatches": []
+    },
+    {
+      "path": "bin/zapret/cygwin1.dll",
+      "sha256": "103104a52e5293ce418944725df19e2bf81ad9269b9a120d71d39028e821499b",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9.zip",
+          "path": "zapret-v72.9/binaries/windows-x86_64/cygwin1.dll"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/quic_initial_www_google_com.bin",
+      "sha256": "f4589c57749f956bb30538197a521d7005f8b0a8723b4707e72405e51ddac50a",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9-source.tar.gz",
+          "path": "zapret-72.9/files/fake/quic_initial_www_google_com.bin"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/tls_clienthello_www_google_com.bin",
+      "sha256": "936c2bee4cfb80aa3c426b2dcbcc834b3fbcd1adb17172959dc569c73a14275c",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9-source.tar.gz",
+          "path": "zapret-72.9/files/fake/tls_clienthello_www_google_com.bin"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/WinDivert.dll",
+      "sha256": "c1e060ee19444a259b2162f8af0f3fe8c4428a1c6f694dce20de194ac8d7d9a2",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9.zip",
+          "path": "zapret-v72.9/binaries/windows-x86_64/WinDivert.dll"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/WinDivert64.sys",
+      "sha256": "8da085332782708d8767bcace5327a6ec7283c17cfb85e40b03cd2323a90ddc2",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9.zip",
+          "path": "zapret-v72.9/binaries/windows-x86_64/WinDivert64.sys"
+        }
+      ]
+    },
+    {
+      "path": "bin/zapret/winws.exe",
+      "sha256": "affb4f69d2ea302a7abccd5325d81826e140ddae014f1e070bc4a6c0dd555188",
+      "upstreamMatches": [
+        {
+          "archive": "zapret-v72.9.zip",
+          "path": "zapret-v72.9/binaries/windows-x86_64/winws.exe"
+        }
+      ]
+    }
+  ]
+}

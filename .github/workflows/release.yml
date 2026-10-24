@@ -1,0 +1,66 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag, e.g. v0.3.1'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: windows-2025
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          persist-credentials: false
+
+      - name: Validate version
+        id: check
+        shell: powershell
+        run: |
+          $version = (Get-Content VERSION -Raw).Trim()
+          if ($version -notmatch '^\d+\.\d+\.\d+$' -or $env:RELEASE_TAG -cne ('v' + $version)) { throw 'Tag does not match VERSION.' }
+          $existing = @(gh release list --limit 1000 --json tagName --jq '.[].tagName')
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to list releases.' }
+          if ($existing -contains $env:RELEASE_TAG) {
+            Write-Host "::notice::Release $env:RELEASE_TAG already exists; skipping."
+            "skip=true" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Build and package
+        if: steps.check.outputs.skip != 'true'
+        shell: powershell
+        run: |
+          ./build.bat
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          ./scripts/package.ps1 -SkipBuild -IncludeInstaller
+
+      - name: Create draft release
+        if: steps.check.outputs.skip != 'true'
+        shell: powershell
+        run: |
+          $version = (Get-Content VERSION -Raw).Trim()
+          $folder = Join-Path 'artifacts/release' ('v' + $version)
+          $assets = @(
+            (Join-Path $folder ('Relay-Setup-Windows-x64-v' + $version + '.exe'))
+            (Join-Path $folder ('Relay-Windows-x64-v' + $version + '.zip'))
+          )
+          foreach ($asset in $assets) { if (-not (Test-Path -LiteralPath $asset)) { throw ('Missing asset: ' + $asset) } }
+          gh release create $env:RELEASE_TAG --verify-tag --draft --title ('Relay ' + $version) --generate-notes @assets
+          if ($LASTEXITCODE -ne 0) { throw 'Failed to create draft release.' }

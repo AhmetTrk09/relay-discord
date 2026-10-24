@@ -1,0 +1,16 @@
+# Build output
+/artifacts/
+/release/
+/third-party/sources/
+*.pdb
+obj/
+
+# IDE
+.vs/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
