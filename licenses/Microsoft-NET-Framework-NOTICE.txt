@@ -1,0 +1,9 @@
+Microsoft .NET Framework 4.8 web installer
+
+Rota Setup, .NET Framework 4.8 bulunmayan sistemler icin Microsoft'un degistirilmeyen ndp48-web.exe dosyasini icerir. Bu dosya Rota'nin MIT lisansinin kapsaminda degildir; Microsoft'un kendi lisans kosullari gecerlidir. Web kurucusu, gerekli Microsoft dosyalarini kurulum sirasinda internetten indirir.
+
+Resmi indirme ve urun bilgisi:
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48
+https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-web-installer
+
+Kaynak URL, dosya ozeti ve yayinci bilgisi third-party/installer.lock.json dosyasindadir. Bu Microsoft bileseni acik kaynak kaynak-paketi arsivlerinin arasinda dagitilmaz. Inno Setup yalnizca derleme aracidir; derleyicinin kendisi Rota paketine eklenmez.
